@@ -19,7 +19,7 @@ char Human::makeMove() {
     cout << "Enter move: ";
     cin >> new_move;
 
-    move = new_move;
+    move = toupper(new_move);
 
     return move;
 }
