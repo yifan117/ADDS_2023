@@ -11,5 +11,5 @@ class Human : public Player {
         Human();
 
         string getName();
-        char makeMove();
+        char makeMove(char new_move);
 };
