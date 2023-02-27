@@ -4,6 +4,7 @@
 #include "Player.h"
 #include "Computer.h"
 #include "Referee.h"
+#include <vector>
 
 using namespace std;
 
@@ -13,10 +14,15 @@ int main() {
     Computer* computer = new Computer();
     Referee* referee = new Referee();
     Player* winner = new Player();
+    vector<char> results = {'s', 'p', 'r', 's'};
 
-    winner = referee->refGame(human, human2);
+    for (auto result : results) {
+        human->makeMove(result);
+        
+        winner = referee->refGame(human, computer);
 
-    if (winner) cout << winner->name << endl;
-    else cout << "Tie" << endl;
+        if (winner) cout << winner->name << endl;
+        else cout << "Tie" << endl;
+    }
 }
 

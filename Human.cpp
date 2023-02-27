@@ -7,17 +7,17 @@ using namespace std;
 
 Human::Human(string new_name) { 
     name = new_name;
-    cout << "Enter move: ";
+    // cout << "Enter move: ";
 
-    cin >> move;
+    // cin >> move;
 }
 
 Human::Human() { 
     name = "Human";
     
-    cout << "Enter move: ";
+    // cout << "Enter move: ";
 
-    cin >> move;
+    // cin >> move;
 }
 
 string Human::getName() {
@@ -27,6 +27,15 @@ string Human::getName() {
 char Human::makeMove(char new_move) {
 
     move = toupper(new_move);
+
+    return move;
+}
+
+char Human::makeMove() {
+
+    cout << "Enter move: ";
+
+    cin >> move;
 
     return move;
 }
