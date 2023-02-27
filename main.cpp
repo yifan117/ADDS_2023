@@ -13,8 +13,6 @@ int main() {
     Referee* referee = new Referee();
     Player* winner = new Player();
 
-    human->makeMove();
-
     winner = referee->refGame(human, computer);
 
     if (winner) cout << winner->name << endl;

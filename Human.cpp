@@ -5,8 +5,15 @@
 
 using namespace std;
 
-Human::Human(string new_name){ name = new_name; }
-Human::Human(){ name = "Human"; }
+Human::Human(string new_name) { 
+    name = new_name;
+    Human::makeMove();
+}
+
+Human::Human() { 
+    name = "Human";
+    Human::makeMove();
+}
 
 string Human::getName() {
     return name;
