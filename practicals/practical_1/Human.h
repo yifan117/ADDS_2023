@@ -1,14 +1,14 @@
 #include <iostream>
 #include <string>
+#include "Player.h"
+#pragma once
 
 using namespace std;
 
-class Human {
-    string name;
-    string input;
+class Human : public Player {
+    public:
+        Human();
 
-    Human();
-
-    void set_name();
-    string get_move();
+        string getName();
+        char makeMove();
 };

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 #include "Human.h"
 
@@ -6,7 +7,7 @@ using namespace std;
 
 Human::Human(){}
 
-void Human::set_name() {
+string Human::getName() {
     string new_name;
 
     cout << "Enter name: ";
@@ -16,13 +17,13 @@ void Human::set_name() {
     name = new_name;
 }
 
-string Human::get_move() {
-    string new_move;
+char Human::makeMove() {
+    char new_move;
 
     cout << "Enter move: ";
     cin >> new_move;
 
-    input = new_move;
+    move = new_move;
 
-    return input;
+    return move;
 }

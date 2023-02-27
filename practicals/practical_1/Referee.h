@@ -1,7 +1,11 @@
 #include <iostream>
-#include "Computer.h"
-#include "Human.h"
+#include <string>
+#include "Player.h"
+#pragma once
 
 class Referee {
-    Referee();
+    public:
+        Referee();
+
+        Player* refGame(Player* player1, Player* player2);
 };
