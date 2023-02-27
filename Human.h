@@ -7,6 +7,7 @@ using namespace std;
 
 class Human : public Player {
     public:
+        Human(string new_name);
         Human();
 
         string getName();

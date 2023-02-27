@@ -5,7 +5,10 @@
 
 using namespace std;
 
-Computer::Computer(){}
+Computer::Computer(){ 
+    name = "Computer";
+    move = 'R';
+}
 
 string Computer::getName() {
     name = "Computer";

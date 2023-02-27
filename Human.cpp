@@ -5,11 +5,10 @@
 
 using namespace std;
 
-Human::Human(){}
+Human::Human(string new_name){ name = new_name; }
+Human::Human(){ name = "Human"; }
 
 string Human::getName() {
-    name = "Human";
-
     return name;
 }
 

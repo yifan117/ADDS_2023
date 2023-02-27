@@ -8,7 +8,7 @@
 using namespace std;
 
 int main() {
-    Human* human = new Human();
+    Human* human = new Human("asd");
     Computer* computer = new Computer();
     Referee* referee = new Referee();
     Player* winner = new Player();
