@@ -8,13 +8,9 @@ using namespace std;
 Human::Human(){}
 
 string Human::getName() {
-    string new_name;
+    name = "Human";
 
-    cout << "Enter name: ";
-
-    cin >> new_name;
-
-    name = new_name;
+    return name;
 }
 
 char Human::makeMove() {

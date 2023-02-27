@@ -15,6 +15,8 @@ int main() {
 
     human->getName();
     human->makeMove();
+    computer->getName();
+    computer->makeMove();
 
     winner = referee->refGame(human, computer);
 

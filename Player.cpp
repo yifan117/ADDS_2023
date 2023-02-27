@@ -7,4 +7,4 @@ using namespace std;
 Player::Player(){}
 
 char Player::makeMove() { return 'R'; }
-string Player::getName() { return "default"; }
+string Player::getName() { return "Computer"; }

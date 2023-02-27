@@ -7,7 +7,7 @@ using namespace std;
 class Player {
     public:
         char move = 'R';
-        string name = "Default";
+        string name = "Computer";
 
         Player();
 
