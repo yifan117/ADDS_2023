@@ -15,7 +15,7 @@ string Human::getName() {
 char Human::makeMove() {
     char new_move;
 
-    cout << "Enter move: ";
+    cout << "Enter move:";
     cin >> new_move;
 
     move = toupper(new_move);

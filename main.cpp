@@ -13,10 +13,7 @@ int main() {
     Referee* referee = new Referee();
     Player* winner = new Player();
 
-    human->getName();
     human->makeMove();
-    computer->getName();
-    computer->makeMove();
 
     winner = referee->refGame(human, computer);
 
