@@ -11,7 +11,6 @@ using namespace std;
 int main() {
     Computer* computer = new Computer();
     Referee* referee = new Referee();
-    Player* winner = new Player();
     vector<char> results = {'s', 'p', 'r', 's'};
 
     for (auto result : results) {
@@ -19,11 +18,8 @@ int main() {
         Human* human = new Human();
         Computer* computer = new Computer();
         Referee* referee = new Referee();
-        Player* winner = new Player();
 
-        winner = referee->refGame(human, computer);
-
-        if (winner) cout << winner->name << endl;
+        if (referee->refGame(human, computer)) cout << referee->refGame(human, computer)->name << endl;
         else cout << "Tie" << endl;
     }
 }

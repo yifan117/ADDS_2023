@@ -10,8 +10,8 @@ class Player {
         char move = 'R';
         std::string name = "Computer";
 
-        virtual std::string getName();
-        virtual char makeMove();
+        virtual std::string getName() = 0;
+        virtual char makeMove() = 0;
 };
 
 #endif
