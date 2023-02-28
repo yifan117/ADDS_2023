@@ -8,13 +8,15 @@ Player::Player(){
 }
 
 char Player::makeMove() {
-    // char new_move;
-    // std::cout << "Enter move: ";
+    char new_move;
+    std::cout << "Enter move: ";
 
-    // std::cin >> new_move;
-    // move = toupper(new_move);
+    std::cin >> new_move;
+    move = toupper(new_move);
+
+    return move;
 }
 
 std::string Player::getName() {
-    // name = new_name;
+    return name;
 }
