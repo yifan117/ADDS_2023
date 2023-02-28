@@ -10,6 +10,7 @@ class Player {
         string name = "Computer";
 
         Player();
+        Player(string new_name);
 
         virtual string getName();
         virtual char makeMove();
