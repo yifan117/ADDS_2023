@@ -1,7 +1,9 @@
+#ifndef HUMAN_H
+#define HUMAN_H
+
 #include <iostream>
 #include <string>
 #include "Player.h"
-#pragma once
 
 class Human : public Player {
     public:
@@ -13,3 +15,5 @@ class Human : public Player {
         char makeMove(char new_move);
         char makeMove();
 };
+
+#endif

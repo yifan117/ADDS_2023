@@ -1,14 +1,17 @@
-#include <iostream>
+#ifndef PLAYER_H
+#define PLAYER_H
+
 #include <string>
-#pragma once
 
 class Player {
     public:
+        Player();
+
         char move = 'R';
         std::string name = "Computer";
-
-        Player();
 
         virtual std::string getName();
         virtual char makeMove();
 };
+
+#endif

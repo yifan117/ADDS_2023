@@ -1,6 +1,8 @@
+#ifndef COMPUTER_H
+#define COMPUTER_H
+
 #include "Player.h"
 #include <string>
-#pragma once
 
 class Computer : public Player {
     public:
@@ -10,3 +12,5 @@ class Computer : public Player {
         std::string getName();
         char makeMove();
 };
+
+#endif

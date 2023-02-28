@@ -2,13 +2,19 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 Player::Player(){
     name = "Unnamed Player";
     move = 'P';
 }
 
-char Player::makeMove() {}
+char Player::makeMove() {
+    // char new_move;
+    // std::cout << "Enter move: ";
 
-string Player::getName() {}
+    // std::cin >> new_move;
+    // move = toupper(new_move);
+}
+
+std::string Player::getName() {
+    // name = new_name;
+}
