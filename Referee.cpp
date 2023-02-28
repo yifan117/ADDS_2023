@@ -10,7 +10,6 @@ Player* Referee::refGame(Player* player1, Player* player2) {
 
     // cout << "player 1: " << player1->name << " " << player1->move << " " << "player 2: " << player2->name << " " << player2->move << endl;
     if (player1->move == player2->move) {
-        cout << "same" << endl; 
         return nullptr;
     }
 
