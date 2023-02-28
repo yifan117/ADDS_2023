@@ -10,14 +10,13 @@ using namespace std;
 
 int main() {
     Computer* computer = new Computer();
-    Referee* referee = new Referee();
     vector<char> results = {'s', 'p', 'r', 's'};
+    Referee* referee = new Referee();
 
     for (auto result : results) {
         // human->makeMove();
         Human* human = new Human();
         Computer* computer = new Computer();
-        Referee* referee = new Referee();
 
         if (referee->refGame(human, computer)) cout << referee->refGame(human, computer)->name << endl;
         else cout << "Tie" << endl;
