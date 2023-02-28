@@ -3,14 +3,12 @@
 
 #include "Human.h"
 
-using namespace std;
-
-Human::Human(string new_name) { 
+Human::Human(std::string new_name) { 
     name = new_name;
     move = 'P';
-    cout << "Enter move: ";
+    std::cout << "Enter move: ";
 
-    cin >> move;
+    std::cin >> move;
 
     move = toupper(move);
 }
@@ -19,14 +17,14 @@ Human::Human() {
     name = "Human";
     move = 'P';
     
-    cout << "Enter move: ";
+    std::cout << "Enter move: ";
 
-    cin >> move;
+    std::cin >> move;
 
     move = toupper(move);
 }
 
-string Human::getName() {
+std::string Human::getName() {
     return name;
 }
 
@@ -39,9 +37,9 @@ char Human::makeMove(char new_move) {
 
 char Human::makeMove() {
 
-    cout << "Enter move: ";
+    std::cout << "Enter move: ";
 
-    cin >> move;
+    std::cin >> move;
 
     move = toupper(move);
 

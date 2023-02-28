@@ -7,6 +7,11 @@ Player::Player(){
     move = 'P';
 }
 
+// Player::Player(std::string player_name){
+//     name = player_name;
+//     move = 'S';
+// }
+
 char Player::makeMove() {
     char new_move;
     std::cout << "Enter move: ";

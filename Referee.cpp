@@ -2,8 +2,6 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 Referee::Referee(){}
 
 Player* Referee::refGame(Player* player1, Player* player2) {
@@ -28,6 +26,6 @@ Player* Referee::refGame(Player* player1, Player* player2) {
         if (player2->move == 'P') return player1;
     }
 
-    cout << "got here" << endl;
+    std::cout << "got here" << std::endl; // should never happen
     return nullptr;
 }

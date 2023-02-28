@@ -3,14 +3,12 @@
 
 #include "Computer.h"
 
-using namespace std;
-
 Computer::Computer(){ 
     name = "Computer";
     move = 'R';
 }
 
-string Computer::getName() {
+std::string Computer::getName() {
     name = "Computer";
 
     return name;

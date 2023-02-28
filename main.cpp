@@ -6,11 +6,9 @@
 #include "Referee.h"
 #include <vector>
 
-using namespace std;
-
 int main() {
     Computer* computer = new Computer();
-    vector<char> results = {'s', 'p', 'r', 's'};
+    std::vector<char> results = {'s', 'p', 'r', 's'};
     Referee* referee = new Referee();
 
     for (auto result : results) {
@@ -18,8 +16,8 @@ int main() {
         Human* human = new Human();
         Computer* computer = new Computer();
 
-        if (referee->refGame(human, computer)) cout << referee->refGame(human, computer)->name << endl;
-        else cout << "Tie" << endl;
+        if (referee->refGame(human, computer)) std::cout << referee->refGame(human, computer)->name << std::endl;
+        else std::cout << "Tie" << std::endl;
     }
 }
 
