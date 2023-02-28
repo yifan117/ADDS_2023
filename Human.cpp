@@ -8,18 +8,18 @@ using namespace std;
 Human::Human(string new_name) { 
     name = new_name;
     move = 'P';
-    // cout << "Enter move: ";
+    cout << "Enter move: ";
 
-    // cin >> move;
+    cin >> move;
 }
 
 Human::Human() { 
     name = "Human";
     move = 'P';
     
-    // cout << "Enter move: ";
+    cout << "Enter move: ";
 
-    // cin >> move;
+    cin >> move;
 }
 
 string Human::getName() {
