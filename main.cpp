@@ -9,8 +9,6 @@
 using namespace std;
 
 int main() {
-    Human* human = new Human();
-    Human* human2 = new Human();
     Computer* computer = new Computer();
     Referee* referee = new Referee();
     Player* winner = new Player();
@@ -19,6 +17,9 @@ int main() {
     for (auto result : results) {
         // human->makeMove();
         Human* human = new Human();
+        Computer* computer = new Computer();
+        Referee* referee = new Referee();
+        Player* winner = new Player();
 
         winner = referee->refGame(human, computer);
 

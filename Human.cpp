@@ -11,6 +11,8 @@ Human::Human(string new_name) {
     cout << "Enter move: ";
 
     cin >> move;
+
+    move = toupper(move);
 }
 
 Human::Human() { 
@@ -20,6 +22,8 @@ Human::Human() {
     cout << "Enter move: ";
 
     cin >> move;
+
+    move = toupper(move);
 }
 
 string Human::getName() {
