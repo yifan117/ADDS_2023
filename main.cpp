@@ -9,7 +9,7 @@
 using namespace std;
 
 int main() {
-    Human* human = new Human("asd");
+    Human* human = new Human();
     Human* human2 = new Human();
     Computer* computer = new Computer();
     Referee* referee = new Referee();
