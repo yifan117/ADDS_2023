@@ -37,5 +37,7 @@ char Human::makeMove() {
 
     cin >> move;
 
+    move = toupper(move);
+
     return move;
 }

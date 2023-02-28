@@ -17,7 +17,7 @@ int main() {
     vector<char> results = {'s', 'p', 'r', 's'};
 
     for (auto result : results) {
-        human->makeMove(result);
+        human->makeMove();
         
         winner = referee->refGame(human, computer);
 
