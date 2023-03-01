@@ -19,5 +19,14 @@ int main() {
         if (referee->refGame(human, computer)) std::cout << referee->refGame(human, computer)->name << std::endl;
         else std::cout << "Tie" << std::endl;
     }
+
+    for (auto result : results) {
+        // human->makeMove();
+        Human* human = new Human();
+        Human* human2 = new Human("mark");
+
+        if (referee->refGame(human, human2)) std::cout << referee->refGame(human, human2)->name << std::endl;
+        else std::cout << "Tie" << std::endl;
+    }
 }
 

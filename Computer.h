@@ -6,7 +6,6 @@
 
 class Computer : public Player {
     public:
-
         Computer();
 
         std::string getName();
