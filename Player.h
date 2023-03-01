@@ -1,21 +1,16 @@
-#ifndef PLAYER_H
-#define PLAYER_H
-
+#include <iostream>
 #include <string>
+#pragma once
+
+using namespace std;
 
 class Player {
     public:
-        Player();
-        // Player(std::string player_name);
-
         char move = 'P';
-        std::string name = "Default Player";
+        string name = "Default";
 
-        virtual std::string getName() = 0;
+        Player();
+
+        virtual string getName() = 0;
         virtual char makeMove() = 0;
-  
-        // std::string getName();
-        // char makeMove();
 };
-
-#endif

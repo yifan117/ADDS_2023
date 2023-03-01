@@ -5,7 +5,7 @@
 
 Human::Human(std::string new_name) { 
     this->name = new_name;
-    this->move = makeMove();
+    this->move = 'P';
     // std::cout << "Enter move: ";
 
     // std::cin >> move;
@@ -15,7 +15,7 @@ Human::Human(std::string new_name) {
 
 Human::Human() { 
     this->name = "Human";
-    this->move = makeMove();
+    this->move = 'P';
     
     // std::cout << "Enter move: ";
 

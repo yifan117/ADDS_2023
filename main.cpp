@@ -10,13 +10,14 @@ int main() {
     Computer* computer = new Computer();
     std::vector<char> results = {'s', 'p', 'r', 's'};
     Referee* referee = new Referee();
+    Human* human = new Human();
+    Player* winner;
 
     for (auto result : results) {
         // human->makeMove();
-        Human* human = new Human();
-        Computer* computer = new Computer();
+        winner = referee->refGame(human, computer);
 
-        if (referee->refGame(human, computer)) std::cout << referee->refGame(human, computer)->name << std::endl;
+        if (winner) std::cout << winner->name << std::endl;
         else std::cout << "Tie" << std::endl;
     }
 
