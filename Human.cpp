@@ -36,12 +36,13 @@ char Human::makeMove(char new_move) {
 }
 
 char Human::makeMove() {
+    char new_move;
 
     std::cout << "Enter move: ";
 
-    std::cin >> move;
+    std::cin >> new_move;
 
-    move = toupper(move);
+    this->move = toupper(new_move);
 
-    return move;
+    return this->move;
 }
