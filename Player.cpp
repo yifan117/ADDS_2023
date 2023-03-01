@@ -3,8 +3,8 @@
 #include <string>
 
 Player::Player(){
-    name = "Unnamed Player";
-    move = 'P';
+    this->name = "Unnamed Player";
+    this->move = 'P';
 }
 
 // Player::Player(std::string player_name){
@@ -17,11 +17,11 @@ char Player::makeMove() {
     std::cout << "Enter move: ";
 
     std::cin >> new_move;
-    move = toupper(new_move);
+    this->move = toupper(new_move);
 
-    return move;
+    return this->move;
 }
 
 std::string Player::getName() {
-    return name;
+    return this->name;
 }

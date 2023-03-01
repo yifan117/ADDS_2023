@@ -4,14 +4,14 @@
 #include "Computer.h"
 
 Computer::Computer(){ 
-    name = "Computer";
-    move = 'R';
+    this->name = "Computer";
+    this->move = 'R';
 }
 
 std::string Computer::getName() {
-    name = "Computer";
+    this->name = "Computer";
 
-    return name;
+    return this->name;
 }
 
 char Computer::makeMove() { return 'R'; }

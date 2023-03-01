@@ -4,35 +4,35 @@
 #include "Human.h"
 
 Human::Human(std::string new_name) { 
-    name = new_name;
-    move = 'P';
-    std::cout << "Enter move: ";
+    this->name = new_name;
+    this->move = 'P';
+    // std::cout << "Enter move: ";
 
-    std::cin >> move;
+    // std::cin >> move;
 
-    move = toupper(move);
+    // move = toupper(move);
 }
 
 Human::Human() { 
-    name = "Human";
-    move = 'P';
+    this->name = "Human";
+    this->move = 'P';
     
-    std::cout << "Enter move: ";
+    // std::cout << "Enter move: ";
 
-    std::cin >> move;
+    // std::cin >> move;
 
-    move = toupper(move);
+    // move = toupper(move);
 }
 
 std::string Human::getName() {
-    return name;
+    return this->name;
 }
 
 char Human::makeMove(char new_move) {
 
-    move = toupper(new_move);
+    this->move = toupper(new_move);
 
-    return move;
+    return this->move;
 }
 
 char Human::makeMove() {
