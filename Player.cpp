@@ -8,13 +8,6 @@ Player::Player(){
 
 Move* Player::makeMove() {
 
-    std::string new_move;
-    std::cout << "Enter move: ";
-
-    std::cin >> new_move;
-
-    this->move->name = new_move;
-
     return move;
 }
 
