@@ -5,7 +5,6 @@
 
 Computer::Computer(){ 
     this->name = "Computer";
-    this->move = 'R';
 }
 
 std::string Computer::getName() {
@@ -14,4 +13,9 @@ std::string Computer::getName() {
     return this->name;
 }
 
-char Computer::makeMove() { return 'R'; }
+Move* Computer::makeMove() {     
+
+    this->move->name = "Rock";
+
+    return move; 
+}

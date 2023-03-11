@@ -4,24 +4,21 @@
 
 Player::Player(){
     this->name = "Unnamed Player";
-    this->move = 'P';
 }
 
-// Player::Player(std::string player_name){
-//     name = player_name;
-//     move = 'S';
-// }
+Move* Player::makeMove() {
 
-char Player::makeMove() {
-    char new_move;
+    std::string new_move;
     std::cout << "Enter move: ";
 
     std::cin >> new_move;
-    this->move = toupper(new_move);
 
-    return this->move;
+    this->move->name = new_move;
+
+    return move;
 }
 
 std::string Player::getName() {
     return this->name;
 }
+

@@ -5,7 +5,6 @@
 
 Human::Human(std::string new_name) { 
     this->name = new_name;
-    this->move = 'P';
     // std::cout << "Enter move: ";
 
     // std::cin >> move;
@@ -15,7 +14,6 @@ Human::Human(std::string new_name) {
 
 Human::Human() { 
     this->name = "Human";
-    this->move = 'P';
     
     // std::cout << "Enter move: ";
 
@@ -28,21 +26,14 @@ std::string Human::getName() {
     return this->name;
 }
 
-char Human::makeMove(char new_move) {
+Move* Human::makeMove() {
 
-    this->move = toupper(new_move);
-
-    return this->move;
-}
-
-char Human::makeMove() {
-    char new_move;
-
+    std::string new_move;
     std::cout << "Enter move: ";
 
     std::cin >> new_move;
 
-    this->move = toupper(new_move);
+    this->move->name = new_move;
 
-    return this->move;
+    return move;
 }

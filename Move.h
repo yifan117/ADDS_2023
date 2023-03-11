@@ -1,9 +1,13 @@
 #ifndef MOVE_H
 #define MOVE_H
 
+#include <string>
+
 class Move {
     public:
-    char makeMove();
+    Move();
+    std::string name;
+    std::string getName();
 };
 
 #endif
