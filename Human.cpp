@@ -29,7 +29,7 @@ std::string Human::getName() {
 Move* Human::makeMove() {
 
     std::string new_move;
-    std::cout << "Enter move: ";
+    // std::cout << "Enter move: ";
 
     std::cin >> new_move;
 
