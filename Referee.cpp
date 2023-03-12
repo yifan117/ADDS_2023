@@ -8,11 +8,11 @@ Referee::Referee(){
     map["Monkey"] = {"Robot", "Ninja"};
     map["Robot"] = {"Ninja", "Zombie"};
     map["Pirate"] = {"Robot", "Monkey"};
-    map["Ninja"] = {"Pirate", "Zombie"};
+    map["Ninja"] = {"Pirate", "Zombie", "Rock"};
     map["Zombie"] = {"Pirate", "Monkey"};
-    map["Rock"] = {"Scissors"};
-    map["Paper"] = {"Rock"};
-    map["Scissors"] = {"Paper"};
+    map["Rock"] = {"Scissors", "Ninja"};
+    map["Paper"] = {"Rock", "Robot"};
+    map["Scissors"] = {"Paper", "Zombie"};
 }
 
 Player* Referee::refGame(Player* player1, Player* player2) {
