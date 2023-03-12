@@ -7,11 +7,9 @@ Player::Player(){
     this->name = "Unnamed Player";
 }
 
-Move* makeMove() {
+Move* Player::makeMove() {
 
     Move* move = new Move();
-
-    move->name = "Scissors";
 
     return move;
 }

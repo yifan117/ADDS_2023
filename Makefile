@@ -1,3 +1,3 @@
 test:
-	g++ Main.cpp Move.cpp Player.cpp Computer.cpp Human.cpp Referee.cpp
-	./a
+	g++ Move.cpp Player.cpp Human.cpp Computer.cpp Referee.cpp Main.cpp -o test
+	./test
