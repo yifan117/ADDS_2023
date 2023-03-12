@@ -8,8 +8,8 @@ Referee::Referee(){
     map["Monkey"] = {"Robot", "Ninja"};
     map["Robot"] = {"Ninja", "Zombie"};
     map["Pirate"] = {"Robot", "Monkey"};
-    map["Ninja"] = {"Pirate", "Zombie", "Rock"};
-    map["Zombie"] = {"Pirate", "Monkey"};
+    map["Ninja"] = {"Pirate", "Zombie"};
+    map["Zombie"] = {"Pirate", "Monkey", "Rock"};
     map["Rock"] = {"Scissors", "Ninja"};
     map["Paper"] = {"Rock", "Robot"};
     map["Scissors"] = {"Paper", "Zombie"};
