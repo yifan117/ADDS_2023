@@ -4,13 +4,14 @@
 #include <iostream>
 #include <string>
 #include "Move.h"
+#include "moveFactory.h"
 
 class Player {
     public:
 
+        Player();
         std::string name = "Default";
         
-        Player();
 
         virtual std::string getName() = 0;
         virtual Move* makeMove() = 0;

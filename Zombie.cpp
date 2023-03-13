@@ -1,8 +1,21 @@
-#ifndef ZOMBIE_H
-#define ZOMBIE_H
+#include "Zombie.h"
 
-#include "Move.h"
+#include <vector>
+#include <string>
 
-class Zombie : public Move {};
+Zombie::Zombie() {
+    setName("Zombie");
+    setMovesBeaten({"Pirate", "Monkey"});
+}
 
-#endif
+std::string Zombie::getName() {
+        return this->name;
+}
+
+void Zombie::setName(std::string new_name) {
+    this->name = new_name;
+}
+
+void Zombie::setMovesBeaten(std::vector<std::string> moves_list) {
+    this->moves_beaten = moves_list;
+}

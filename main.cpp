@@ -6,6 +6,17 @@
 #include "Referee.h"
 #include <vector>
 
+#include "moveFactory.h"
+#include "Move.h"
+#include "Rock.h"
+#include "Paper.h"
+#include "Scissors.h"
+#include "Zombie.h"
+#include "Robot.h"
+#include "Monkey.h"
+#include "Ninja.h"
+#include "Pirate.h"
+
 int main() {
     Computer* computer = new Computer();
     std::vector<char> results = {'s', 'p', 'r', 's'};

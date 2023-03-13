@@ -2,13 +2,15 @@
 #define COMPUTER_H
 
 #include "Player.h"
+#include "moveFactory.h"
+#include "Move.h"
+
 #include <string>
 
 class Computer : public Player {
     public:
         Computer();
 
-        Move* move = new Move();
         std::string getName();
         Move* makeMove();
 };

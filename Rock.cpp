@@ -1,8 +1,18 @@
-#ifndef ROCK_H
-#define ROCK_H
+#include "Rock.h"
 
-#include "Move.h"
+Rock::Rock() {
+    setName("Rock");
+    setMovesBeaten({"Scissors"});
+}
 
-class Rock : public Move {};
+std::string Rock::getName() {
+        return this->name;
+}
 
-#endif
+void Rock::setName(std::string new_name) {
+    this->name = new_name;
+}
+
+void Rock::setMovesBeaten(std::vector<std::string> moves_list) {
+    this->moves_beaten = moves_list;
+}

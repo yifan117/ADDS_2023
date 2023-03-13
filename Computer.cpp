@@ -3,6 +3,17 @@
 
 #include "Computer.h"
 
+#include "moveFactory.h"
+#include "Move.h"
+#include "Rock.h"
+#include "Paper.h"
+#include "Scissors.h"
+#include "Zombie.h"
+#include "Robot.h"
+#include "Monkey.h"
+#include "Ninja.h"
+#include "Pirate.h"
+
 Computer::Computer(){ 
     this->name = "Computer";
 }
@@ -14,8 +25,7 @@ std::string Computer::getName() {
 }
 
 Move* Computer::makeMove() {     
-
-    this->move->name = "Rock";
-
-    return move; 
+    Factory* factory = new Factory();
+    
+    return factory->assign_move("Rock");
 }

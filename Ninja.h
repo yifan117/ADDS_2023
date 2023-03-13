@@ -2,7 +2,16 @@
 #define NINJA_H
 
 #include "Move.h"
+#include <vector>
+#include <string>
 
-class Ninja : public Move {};
+class Ninja : public Move {
+    public:
+        Ninja();
+
+        std::string getName();
+        void setName(std::string new_name);
+        void setMovesBeaten(std::vector<std::string> moves_list);
+};
 
 #endif

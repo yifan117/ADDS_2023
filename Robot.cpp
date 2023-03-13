@@ -1,8 +1,18 @@
-#ifndef ROBOT_H
-#define ROBOT_H
+#include "Robot.h"
 
-#include "Move.h"
+Robot::Robot() {
+    setName("Robot");
+    setMovesBeaten({"Ninja", "Zombie"});
+}
 
-class Robot : public Move {};
+std::string Robot::getName() {
+        return this->name;
+}
 
-#endif
+void Robot::setName(std::string new_name) {
+    this->name = new_name;
+}
+
+void Robot::setMovesBeaten(std::vector<std::string> moves_list) {
+    this->moves_beaten = moves_list;
+}

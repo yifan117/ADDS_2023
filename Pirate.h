@@ -1,13 +1,13 @@
-#ifndef ZOMBIE_H
-#define ZOMBIE_H
+#ifndef PIRATE_H
+#define PIRATE_H
 
-#include "Move.h"
 #include <vector>
 #include <string>
+#include "Move.h"
 
-class Zombie : public Move {
+class Pirate : public Move {
     public:
-        Zombie();
+        Pirate();
 
         std::string getName();
         void setName(std::string new_name);

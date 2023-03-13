@@ -1,8 +1,18 @@
-#ifndef SCISSORS_H
-#define SCISSORS_H
+#include "Scissors.h"
 
-#include "Move.h"
+Scissors::Scissors() {
+    setName("Scissors");
+    setMovesBeaten({"Paper"});
+}
 
-class Scissors : public Move {};
+std::string Scissors::getName() {
+        return this->name;
+}
 
-#endif
+void Scissors::setName(std::string new_name) {
+    this->name = new_name;
+}
+
+void Scissors::setMovesBeaten(std::vector<std::string> moves_list) {
+    this->moves_beaten = moves_list;
+}

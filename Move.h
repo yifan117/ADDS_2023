@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include "moveFactory.h"
 
 class Move {
     public:
@@ -12,6 +13,9 @@ class Move {
         std::vector<std::string> moves_beaten;
 
         virtual std::string getName() = 0;
+        virtual void setName(std::string new_name) = 0;
+        virtual void setMovesBeaten(std::vector<std::string> moves_list) = 0;
+
 
 };
 
