@@ -1,3 +1,9 @@
+/*
+Group members:
+Yifan Lu a1800801
+Lara Grocke a1802741
+*/
+
 #include "Human.h"
 
 Human::Human(std::string new_name) { 
@@ -28,7 +34,7 @@ Move* Human::makeMove() {
     MoveFactory* factory = new MoveFactory();
 
     std::string new_move;
-    
+
     std::cout << "Enter move: ";
 
     std::cin >> new_move;

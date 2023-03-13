@@ -1,3 +1,9 @@
+/*
+Group members:
+Yifan Lu a1800801
+Lara Grocke a1802741
+*/
+
 #ifndef ROBOT_H
 #define ROBOT_H
 

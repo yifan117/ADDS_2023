@@ -1,3 +1,9 @@
+/*
+Group members:
+Yifan Lu a1800801
+Lara Grocke a1802741
+*/
+
 #ifndef PIRATE_H
 #define PIRATE_H
 

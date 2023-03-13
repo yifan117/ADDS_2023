@@ -1,20 +1,14 @@
-#include <iostream>
-#include <string>
-#include "Human.h"
-#include "Player.h"
-#include "Computer.h"
-#include "Referee.h"
-#include <vector>
+/*
+Group members:
+Yifan Lu a1800801
+Lara Grocke a1802741
+*/
 
 #include "Move.h"
-#include "Rock.h"
-#include "Paper.h"
-#include "Scissors.h"
-#include "Zombie.h"
-#include "Robot.h"
-#include "Monkey.h"
-#include "Ninja.h"
-#include "Pirate.h"
+#include "Player.h"
+#include "Computer.h"
+#include "Human.h"
+#include "Referee.h"
 
 int main() {
     Computer* computer = new Computer();
