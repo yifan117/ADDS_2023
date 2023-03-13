@@ -2,7 +2,6 @@
 #define PAPER_H
 
 #include "Move.h"
-#include "MoveFactory.h"
 #include <vector>
 #include <string>
 

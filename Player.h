@@ -3,8 +3,8 @@
 
 #include <iostream>
 #include <string>
-#include "MoveFactory.h"
 #include "Move.h"
+#include "MoveFactory.h"
 
 class Player {
     public:
