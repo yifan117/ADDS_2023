@@ -26,13 +26,13 @@ Player* Referee::refGame(Player* player1, Player* player2) {
     }
 
     if (p1move->name == "Rock" || p1move->name == "Paper" || p1move->name == "Scissors") {
-        if (p2move->name != "Rock" || p2move->name != "Paper" || p2move->name != "Scissors") {
+        if (p2move->name != "Rock" && p2move->name != "Paper" && p2move->name != "Scissors") {
             return nullptr;
         }
     }
 
     if (p2move->name == "Rock" || p2move->name == "Paper" || p2move->name == "Scissors") {
-        if (p1move->name != "Rock" || p1move->name != "Paper" || p1move->name != "Scissors") {
+        if (p1move->name != "Rock" && p1move->name != "Paper" && p1move->name != "Scissors") {
             return nullptr;
         }
     }
