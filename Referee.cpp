@@ -19,10 +19,6 @@ Player* Referee::refGame(Player* player1, Player* player2) {
     Move* p1move = player1->makeMove();
     Move* p2move = player2->makeMove();
 
-    if (p1move->name == p2move->name) {
-        return nullptr;
-    }
-
     if (map.find(p1move->name) != map.end()) {
 
         for (std::string option : map[p1move->name]) {
