@@ -9,8 +9,7 @@ class Player {
     public:
 
         std::string name = "Default";
-        Move* move = new Move();
-
+        
         Player();
 
         virtual std::string getName() = 0;

@@ -33,9 +33,9 @@ Move* Human::makeMove() {
 
     std::cin >> new_move;
 
-    switch (new_move) {
+    // switch (new_move) {
         
-    }
+    // }
 
     new_move[0] = toupper(new_move[0]);
 
