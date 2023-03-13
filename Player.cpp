@@ -2,8 +2,8 @@
 #include <iostream>
 #include <string>
 
-#include "moveFactory.h"
 #include "Move.h"
+#include "MoveFactory.h"
 #include "Rock.h"
 #include "Paper.h"
 #include "Scissors.h"
@@ -22,7 +22,7 @@ std::string Player::getName() {
 }
 
 Move* Player::makeMove() {
-    Move* default;
+    Move* temp = new Rock();
 
-    return default;
+    return temp;
 }

@@ -3,8 +3,8 @@
 
 #include "Computer.h"
 
-#include "moveFactory.h"
 #include "Move.h"
+#include "MoveFactory.h"
 #include "Rock.h"
 #include "Paper.h"
 #include "Scissors.h"
@@ -25,7 +25,7 @@ std::string Computer::getName() {
 }
 
 Move* Computer::makeMove() {     
-    Factory* factory = new Factory();
+    MoveFactory* factory = new MoveFactory();
     
     return factory->assign_move("Rock");
 }

@@ -3,7 +3,7 @@
 
 #include <string>
 #include <vector>
-#include "moveFactory.h"
+#include "Move.h"
 
 class Move {
     public:

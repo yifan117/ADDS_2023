@@ -4,9 +4,9 @@
 #include "Move.h"
 #include <string>
 
-class Factory {
+class MoveFactory {
     public:
-        Factory();
+        MoveFactory();
         
         Move* assign_move(std::string move);
 };

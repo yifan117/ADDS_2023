@@ -1,5 +1,5 @@
-#include "moveFactory.h"
 #include "Move.h"
+#include "MoveFactory.h"
 #include "Rock.h"
 #include "Paper.h"
 #include "Scissors.h"
@@ -12,9 +12,9 @@
 #include <string>
 #include <vector>
 
-Factory::Factory() {}
+MoveFactory::MoveFactory() {}
 
-Move* Factory::assign_move(std::string move) {
+Move* MoveFactory::assign_move(std::string move) {
     std::string temp = move;
 
     Move* selected;

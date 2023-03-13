@@ -2,8 +2,8 @@
 #define COMPUTER_H
 
 #include "Player.h"
-#include "moveFactory.h"
 #include "Move.h"
+#include "MoveFactory.h"
 
 #include <string>
 

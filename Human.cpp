@@ -3,8 +3,8 @@
 
 #include "Human.h"
 
-#include "moveFactory.h"
 #include "Move.h"
+#include "MoveFactory.h"
 #include "Rock.h"
 #include "Paper.h"
 #include "Scissors.h"
@@ -39,7 +39,7 @@ std::string Human::getName() {
 
 Move* Human::makeMove() {
 
-    Factory* factory = new Factory();
+    MoveFactory* factory = new MoveFactory();
 
     std::string new_move;
     // std::cout << "Enter move: ";

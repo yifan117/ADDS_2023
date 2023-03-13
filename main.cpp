@@ -6,8 +6,8 @@
 #include "Referee.h"
 #include <vector>
 
-#include "moveFactory.h"
 #include "Move.h"
+#include "MoveFactory.h"
 #include "Rock.h"
 #include "Paper.h"
 #include "Scissors.h"
