@@ -18,7 +18,7 @@ int main() {
         winner = referee->refGame(human, computer);
 
         if (winner) std::cout << winner->name << std::endl;
-        else std::cout << "Tie" << std::endl;
+        // else std::cout << "Tie" << std::endl;
     }
 
     // for (auto result : results) {
