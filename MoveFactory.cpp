@@ -2,7 +2,7 @@
 
 MoveFactory::MoveFactory() {}
 
-Move* MoveFactory::assign_move(std::string move) {
+Move* MoveFactory::assign_move(std::string move) { // instantiates a Move object based on the string passed in
 
     Move* selected;
 
