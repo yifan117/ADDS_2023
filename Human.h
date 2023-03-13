@@ -11,7 +11,6 @@ class Human : public Player {
         Human(std::string new_name);
         Human();
 
-        Move* move = new Move();
         std::string getName();
         Move* makeMove();
 };

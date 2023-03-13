@@ -2,12 +2,17 @@
 #define MOVE_H
 
 #include <string>
+#include <vector>
 
 class Move {
     public:
         Move();
+
         std::string name;
-        std::string getName();
+        std::vector<std::string> moves_beaten;
+
+        virtual std::string getName() = 0;
+
 };
 
 #endif

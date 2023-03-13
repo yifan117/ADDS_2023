@@ -3,10 +3,6 @@
 
 #include "Move.h"
 
-Move::Move() {
-    this->name = "Scissors";
-}
-
 std::string Move::getName() {
-    return this->name;
+        return this->name;
 }

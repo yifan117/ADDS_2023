@@ -9,7 +9,7 @@ Referee::Referee(){
     mp["Robot"] = {"Ninja", "Zombie"};
     mp["Pirate"] = {"Robot", "Monkey"};
     mp["Ninja"] = {"Pirate", "Zombie"};
-    mp["Zombie"] = {"Pirate", "Monkey", "Rock"};
+    mp["Zombie"] = {"Pirate", "Monkey"};
     mp["Rock"] = {"Scissors"};
     mp["Paper"] = {"Rock"};
     mp["Scissors"] = {"Paper"};
