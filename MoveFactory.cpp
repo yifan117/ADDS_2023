@@ -1,21 +1,8 @@
-#include "Move.h"
 #include "MoveFactory.h"
-#include "Rock.h"
-#include "Paper.h"
-#include "Scissors.h"
-#include "Zombie.h"
-#include "Robot.h"
-#include "Monkey.h"
-#include "Ninja.h"
-#include "Pirate.h"
-
-#include <string>
-#include <vector>
 
 MoveFactory::MoveFactory() {}
 
 Move* MoveFactory::assign_move(std::string move) {
-    std::string temp = move;
 
     Move* selected;
 

@@ -7,4 +7,4 @@ std::string Move::getName() {
 }
 
 void Move::setName(std::string new_name){};
-void Move::setMovesBeaten(std::vector<std::string> moves_list){};
+void Move::setMovesBeaten(std::unordered_set<std::string> moves_list){};

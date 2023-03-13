@@ -13,6 +13,6 @@ void Robot::setName(std::string new_name) {
     this->name = new_name;
 }
 
-void Robot::setMovesBeaten(std::vector<std::string> moves_list) {
+void Robot::setMovesBeaten(std::unordered_set<std::string> moves_list) {
     this->moves_beaten = moves_list;
 }

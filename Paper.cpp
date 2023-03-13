@@ -13,6 +13,6 @@ void Paper::setName(std::string new_name) {
     this->name = new_name;
 }
 
-void Paper::setMovesBeaten(std::vector<std::string> moves_list) {
+void Paper::setMovesBeaten(std::unordered_set<std::string> moves_list) {
     this->moves_beaten = moves_list;
 }

@@ -13,6 +13,6 @@ void Scissors::setName(std::string new_name) {
     this->name = new_name;
 }
 
-void Scissors::setMovesBeaten(std::vector<std::string> moves_list) {
+void Scissors::setMovesBeaten(std::unordered_set<std::string> moves_list) {
     this->moves_beaten = moves_list;
 }
