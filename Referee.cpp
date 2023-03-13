@@ -18,33 +18,28 @@ Referee::Referee(){
 Player* Referee::refGame(Player* player1, Player* player2) {
     Move* p1move = player1->makeMove();
     Move* p2move = player2->makeMove();
-
+    std::vector<std::string> movesBeaten;
 
 
     if (p1move->name == p2move->name) {
         return nullptr;
     }
 
-    if (p1move->name == "Rock" || p1move->name == "Paper" || p1move->name == "Scissors") {
-        if (p2move->name != "Rock" && p2move->name != "Paper" && p2move->name != "Scissors") {
-            return nullptr;
-        }
-    }
-
-    if (p2move->name == "Rock" || p2move->name == "Paper" || p2move->name == "Scissors") {
-        if (p1move->name != "Rock" && p1move->name != "Paper" && p1move->name != "Scissors") {
-            return nullptr;
-        }
-    }
-
     if (map.find(p1move->name) != map.end()) {
-        for (std::string option : map[p1move->name]) {
-            if (option == p2move->name) return player1;
-        }
+        movesBeaten = map[p1move->name];
 
-        return player2;
+        if (std::find(movesBeaten.begin(), movesBeaten.end(), p2move->name) != movesBeaten.end()) {
+            return player1;
+        }
     }
 
-    std::cout << "got here" << std::endl; // should never happen
-    return nullptr;
+    if (map.find(p2move->name) != map.end()) {
+        movesBeaten = map[p2move->name];
+
+        if (std::find(movesBeaten.begin(), movesBeaten.end(), p1move->name) != movesBeaten.end()) {
+            return player2;
+        }
+    }
+
+    return nullptr; // occurs if moves are incompatible ("Rock" vs "Ninja")
 }
