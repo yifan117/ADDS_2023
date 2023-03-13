@@ -1,10 +1,9 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include <iostream>
-#include <string>
-#include "Move.h"
 #include "MoveFactory.h"
+
+#include <iostream>
 
 class Player {
     public:

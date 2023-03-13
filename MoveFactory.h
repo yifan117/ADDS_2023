@@ -2,7 +2,14 @@
 #define MOVEFACTORY_H
 
 #include "Move.h"
-#include <string>
+#include "Rock.h"
+#include "Paper.h"
+#include "Scissors.h"
+#include "Zombie.h"
+#include "Robot.h"
+#include "Monkey.h"
+#include "Ninja.h"
+#include "Pirate.h"
 
 class MoveFactory {
     public:

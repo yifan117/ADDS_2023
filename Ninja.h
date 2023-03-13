@@ -2,8 +2,6 @@
 #define NINJA_H
 
 #include "Move.h"
-#include <vector>
-#include <string>
 
 class Ninja : public Move {
     public:

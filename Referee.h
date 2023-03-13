@@ -3,10 +3,14 @@
 
 #include "Player.h"
 #include "Move.h"
-
-#include <iostream>
-#include <string>
-#include <vector>
+#include "Rock.h"
+#include "Paper.h"
+#include "Scissors.h"
+#include "Zombie.h"
+#include "Robot.h"
+#include "Monkey.h"
+#include "Ninja.h"
+#include "Pirate.h"
 
 class Referee {
     public:

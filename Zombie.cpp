@@ -1,8 +1,5 @@
 #include "Zombie.h"
 
-#include <vector>
-#include <string>
-
 Zombie::Zombie() {
     setName("Zombie");
     setMovesBeaten({"Pirate", "Monkey"});

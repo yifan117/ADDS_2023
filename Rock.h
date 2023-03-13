@@ -2,8 +2,6 @@
 #define ROCK_H
 
 #include "Move.h"
-#include <vector>
-#include <string>
 
 class Rock : public Move {
     public:

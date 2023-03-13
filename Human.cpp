@@ -1,17 +1,4 @@
-#include <iostream>
-#include <string>
-
 #include "Human.h"
-
-#include "Move.h"
-#include "Rock.h"
-#include "Paper.h"
-#include "Scissors.h"
-#include "Zombie.h"
-#include "Robot.h"
-#include "Monkey.h"
-#include "Ninja.h"
-#include "Pirate.h"
 
 Human::Human(std::string new_name) { 
     this->name = new_name;
