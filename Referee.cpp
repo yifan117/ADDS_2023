@@ -10,9 +10,9 @@ Referee::Referee(){
     map["Pirate"] = {"Robot", "Monkey"};
     map["Ninja"] = {"Pirate", "Zombie"};
     map["Zombie"] = {"Pirate", "Monkey", "Rock"};
-    map["Rock"] = {"Scissors", "Ninja"};
-    map["Paper"] = {"Rock", "Robot"};
-    map["Scissors"] = {"Paper", "Zombie"};
+    map["Rock"] = {"Scissors"};
+    map["Paper"] = {"Rock"};
+    map["Scissors"] = {"Paper"};
 }
 
 Player* Referee::refGame(Player* player1, Player* player2) {
@@ -23,6 +23,18 @@ Player* Referee::refGame(Player* player1, Player* player2) {
 
     if (p1move->name == p2move->name) {
         return nullptr;
+    }
+
+    if (p1move->name == "Rock" || p1move->name == "Paper" || p1move->name == "Scissors") {
+        if (p2move->name != "Rock" || p2move->name != "Paper" || p2move->name != "Scissors") {
+            return nullptr;
+        }
+    }
+
+    if (p2move->name == "Rock" || p2move->name == "Paper" || p2move->name == "Scissors") {
+        if (p1move->name != "Rock" || p1move->name != "Paper" || p1move->name != "Scissors") {
+            return nullptr;
+        }
     }
 
     if (map.find(p1move->name) != map.end()) {

@@ -5,9 +5,9 @@
 
 class Move {
     public:
-    Move();
-    std::string name;
-    std::string getName();
+        Move();
+        std::string name;
+        std::string getName();
 };
 
 #endif
