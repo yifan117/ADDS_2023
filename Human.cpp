@@ -33,6 +33,8 @@ Move* Human::makeMove() {
 
     std::cin >> new_move;
 
+    new_move[0] = toupper(new_move[0]);
+
     this->move->name = new_move;
 
     return move;
