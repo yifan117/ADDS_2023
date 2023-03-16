@@ -5,12 +5,12 @@ int Reverser::reverseDigit(int num) {
 
     if (num <= 0) return digitAns;
 
-    if (first) {
-        std::string err_check = std::to_string(num);
-        if (err_check[err_check.length() - 1] == '0') return -1;
-    }
+    // if (first) {
+    //     std::string err_check = std::to_string(num);
+    //     if (err_check[err_check.length() - 1] == '0') return -1;
+    // }
 
-    first = false;
+    // first = false;
 
     digitAns = digitAns * 10 + num % 10;
 
