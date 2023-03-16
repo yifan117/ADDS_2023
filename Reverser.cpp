@@ -3,10 +3,12 @@
 
 int Reverser::reverseDigit(int num) {
 
-    std::cout << num << std::endl;
     if (num <= 0) return digitAns;
 
-    // if (first && num < 10) return -1;
+    if (first) {
+        std::string err_check = std::to_string(num);
+        if (err_check[err_check.length() - 1] == '0') return -1;
+    }
 
     first = false;
 

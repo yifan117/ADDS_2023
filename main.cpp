@@ -8,8 +8,8 @@ int main() {
     Reverser rtest;
     EfficientTruckloads etest;
 
-    std::cout << etest.numTrucks(1024,5) << std::endl;
+    // std::cout << etest.numTrucks(1024,5) << std::endl;
 
-    // std::cout << rtest.reverseDigit(12392) << std::endl;
+    std::cout << rtest.reverseDigit(10100) << std::endl;
     // std::cout << rtest.reverseString("12392") << std::endl;
 }
