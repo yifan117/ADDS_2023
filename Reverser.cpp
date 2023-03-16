@@ -3,7 +3,7 @@
 int Reverser::reverseDigit(int num) {
     if (num <= 0) return digitAns;
 
-    if (first && num < 10) return -1;
+    // if (first && num < 10) return -1;
 
     first = false;
 
@@ -17,7 +17,7 @@ std::string Reverser::reverseString(std::string characters) {
         right = characters.length() - 1;
     }
 
-    if (characters.length() < 2) return "ERROR";
+    // if (characters.length() < 2) return "ERROR";
 
     if (left >= right) return characters;
 
