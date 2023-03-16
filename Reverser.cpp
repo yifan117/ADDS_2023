@@ -1,6 +1,9 @@
 #include "Reverser.h"
+#include <iostream>
 
 int Reverser::reverseDigit(int num) {
+
+    std::cout << num << std::endl;
     if (num <= 0) return digitAns;
 
     // if (first && num < 10) return -1;
