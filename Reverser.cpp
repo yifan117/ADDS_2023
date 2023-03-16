@@ -12,7 +12,15 @@ int Reverser::reverseDigit(int num) {
 
     // first = false;
 
-    digitAns = digitAns * 10 + num % 10;
+    // try {
+
+        digitAns = digitAns * 10 + num % 10;
+
+    // } catch (std::out_of_range) {
+    //     return -1;
+    // }
+
+
 
     return reverseDigit(num/10);
 }
