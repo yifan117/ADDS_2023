@@ -10,6 +10,6 @@ int main() {
 
     // std::cout << etest.numTrucks(1024,5) << std::endl;
 
-    std::cout << rtest.reverseDigit(123) << std::endl;
+    std::cout << rtest.reverseDigit(1000) << std::endl;
     // std::cout << rtest.reverseString("12392") << std::endl;
 }

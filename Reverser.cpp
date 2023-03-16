@@ -3,6 +3,7 @@
 
 int Reverser::reverseDigit(int num) {
 
+    if (first && num <= 0) return -1;
     if (num <= 0) return digitAns;
 
     // if (first) {
