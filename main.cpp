@@ -1,15 +1,18 @@
-#include "Truckloads.h"
-#include "EfficientTruckloads.h"
-#include "Reverser.h"
-#include <iostream>
+#include "Finder.h"
+#include <string>
+#include <vector>
+
+using namespace std;
 
 int main() {
-    Truckloads test;
-    Reverser rtest;
-    EfficientTruckloads etest;
+    Finder f1;
 
-    // std::cout << etest.numTrucks(1024,5) << std::endl;
+    string s1 = "asdasd";
+    string s2 = "asd";
 
-    std::cout << rtest.reverseDigit(1000) << std::endl;
-    // std::cout << rtest.reverseString("12392") << std::endl;
+    vector<int> a = f1.findSubstrings(s1, s2);
+    
+    for (auto v : a) {
+        cout << v << endl;
+    }
 }
