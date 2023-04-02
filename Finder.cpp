@@ -1,33 +1,20 @@
 #include "Finder.h"
-#include <unordered_map>
 
-    using namespace std;
+using namespace std;
 
-    vector<int> Finder::findSubstrings(string s1, string s2) {
-        vector<int> result;
+vector<int> Finder::findSubstrings(string s1, string s2) {
+    vector<int> result;
 
-        for (int i = 0; i < s1.length(); i++) {
-            if (s2[0] == s1[i]) {
+    for (size_t i = 1; i <= s2.size(); i++) {
+        size_t found = s1.find(s2.substr(0, i));
 
-                if (s2.length() >= 2 && i < s1.length() - 1) {
-                    int current = i + 1;
-
-                    for (int j = 1; j < s2.length(); j++) {
-                        if (s2[j] != s1[current]) {
-                            break;
-                        }
-
-                        current++;
-
-                        if (j == s2.length() - 1) {
-                            result.push_back(i);
-                        }
-                    }
-                } else {
-                    result.push_back(i);
-                }
-            }
+        if (found != string::npos) {
+            result.push_back(found);
+        } else {
+            result.push_back(-1);
+            break;
         }
-
-        return result;
     }
+
+    return result;
+}

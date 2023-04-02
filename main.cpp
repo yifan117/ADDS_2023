@@ -7,8 +7,8 @@ using namespace std;
 int main() {
     Finder f1;
 
-    string s1 = "asdasd";
-    string s2 = "asd";
+    string s1 = "23426872";
+    string s2 = "26";
 
     vector<int> a = f1.findSubstrings(s1, s2);
     
