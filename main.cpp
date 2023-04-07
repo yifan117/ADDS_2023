@@ -13,7 +13,8 @@ int main() {
         list.push_back(num);
     }
 
-    Sort* sorter = new QuickSort();
+    // Sort* sorter = new QuickSort();
+    Sort* sorter = new BubbleSort();
     list = sorter->sort(list);
 
     for (int val : list) {
