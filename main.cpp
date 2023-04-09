@@ -10,7 +10,7 @@ int main() {
     std::vector<int> list;
     
     int num;
-    
+
     while (std::cin >> num) {
         list.push_back(num);
     }
@@ -26,5 +26,4 @@ int main() {
     for (int val : list) {
         std::cout << val << " ";
     }
-
 }
