@@ -138,6 +138,6 @@ std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2) {
     if (carry != 0) {
         ans.emplace_front(carry);
     }
-
+    
     return ans;
 }
