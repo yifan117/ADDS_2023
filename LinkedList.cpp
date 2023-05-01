@@ -15,11 +15,12 @@ LinkedList::LinkedList(int* array, int len) {
         return;
     }
 
+    head = new Node();
     head->set_data(array[0]);
     Node* curr = head;
 
     for (int i = 1; i < len; i++) {
-        Node* next = nullptr;
+        Node* next = new Node();
         next->set_data(array[i]);
         curr->set_link(next);
         curr = next;
