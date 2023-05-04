@@ -15,7 +15,7 @@ class LinkedList {
         int get_size();
         void set_size(int size);
         /* 
-            inserts new node containing the number newNum into the pos position
+            inserts new node containing the number newNum    into the pos position
             pos of 1 or less places new node at the front of the list
             pos greater than size adds node to end of the list
         */

@@ -6,56 +6,58 @@ using namespace std;
 
 int main() {
     // // build and initialize a linked list object named ll
-    // LinkedList ll;
+    LinkedList ll;
 
-    // ll.insertPosition(0, 1);
-    // ll.insertPosition(0, 2);
-    // ll.insertPosition(0, 3);
-    // ll.insertPosition(0, 4);
-    // ll.insertPosition(0, 5);
-    // ll.insertPosition(0, 6);
-    // ll.insertPosition(0, 7);
+    ll.insertPosition(0, 1);
+    ll.insertPosition(0, 2);
+    ll.insertPosition(0, 3);
+    ll.insertPosition(0, 4);
+    ll.insertPosition(0, 5);
+    ll.insertPosition(0, 6);
+    ll.insertPosition(0, 7);
 
-    // ll.printList();
+    ll.printList();
 
-    // ll.insertPosition(111, 99);
+    ll.insertPosition(111, 99);
 
-    // ll.printList();
+    ll.printList();
 
-    // ll.deletePosition(1);
+    ll.deletePosition(1);
 
-    // ll.printList();
+    ll.printList();
 
-    // std::cout << ll.get(100) << std::endl;
+    std::cout << ll.get(100) << std::endl;
 
-    // std::cout << ll.search(111) << std::endl;
+    std::cout << ll.search(111) << std::endl;
 
-    BigNumCalc num1;
-    BigNumCalc num2;
+    std::cout << ll.search(5) << std::endl;
 
-    num1.buildBigNum("10009");
-    num2.buildBigNum("10009");
+    // BigNumCalc num1;
+    // BigNumCalc num2;
 
-    BigNumCalc sum;
+    // num1.buildBigNum("10009");
+    // num2.buildBigNum("10009");
 
-    sum.add(num1.get_num(), num2.get_num());
+    // BigNumCalc sum;
 
-    for (auto it : sum.get_num()) {
-        std::cout << it;
-    }
+    // sum.add(num1.get_num(), num2.get_num());
 
-    std::cout << "\n";
+    // for (auto it : sum.get_num()) {
+    //     std::cout << it;
+    // }
 
-    num1.buildBigNum("10019");
-    num2.buildBigNum("10009");
+    // std::cout << "\n";
 
-    BigNumCalc diff;
+    // num1.buildBigNum("10019");
+    // num2.buildBigNum("10009");
 
-    diff.sub(num1.get_num(), num2.get_num());
+    // BigNumCalc diff;
 
-    for (auto it : diff.get_num()) {
-        std::cout << it;
-    }
+    // diff.sub(num1.get_num(), num2.get_num());
+
+    // for (auto it : diff.get_num()) {
+    //     std::cout << it;
+    // }
 
     return 0;
 }

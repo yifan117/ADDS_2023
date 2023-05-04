@@ -125,7 +125,7 @@ int LinkedList::search(int target) {
     Node* curr = head;
     int index = 1;
 
-    while (curr->get_link()) {
+    while (curr) {
         if (curr->get_data() == target) {
             return index;
         }
