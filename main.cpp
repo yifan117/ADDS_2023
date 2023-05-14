@@ -1,29 +1,36 @@
+#include "Autocomplete.h"
 #include <iostream>
-#include <vector>
-
-#include "Sort.h"
-#include "BubbleSort.h"
-#include "QuickSort.h"
-#include "RecursiveBinarySearch.h"
 
 int main() {
-    std::vector<int> list;
-    
-    int num;
+    Autocomplete j;
 
-    while (std::cin >> num) {
-        list.push_back(num);
+    j.insert("bin");
+    j.insert("ball");
+    j.insert("ballet");
+
+    std::vector<std::string> suggestions;
+
+    suggestions = j.getSuggestions("b");
+
+    for (auto c : suggestions) {
+        std::cout << c << std::endl;
     }
 
-    Sort* sorter = new QuickSort();
-    // Sort* sorter = new BubbleSort();
-    RecursiveBinarySearch* searcher = new RecursiveBinarySearch();
+    std::cout << "\n \n";
 
-    list = sorter->sort(list);
+    suggestions = j.getSuggestions("ba");
 
-    std::cout << std::boolalpha << searcher->search(list, 1) << " ";
-
-    for (int val : list) {
-        std::cout << val << " ";
+    for (auto c : suggestions) {
+        std::cout << c << std::endl;
     }
+
+    std::cout << "\n \n";
+
+    suggestions = j.getSuggestions("bal");
+
+    for (auto c : suggestions) {
+        std::cout << c << std::endl;
+    }
+
+    std::cout << "\n \n";
 }
