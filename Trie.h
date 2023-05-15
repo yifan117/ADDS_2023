@@ -9,7 +9,8 @@ struct TrieNode {
     std::unordered_map<char, TrieNode*> children; // children, map is used for O(1) access
     std::vector<std::string> dictionary; // dictionary of words available at each node
     int routerNum;
-    int longest;
+    int longest = 0;
+    int longestRoute = -1;
 };
 
 class Trie {

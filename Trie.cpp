@@ -45,10 +45,13 @@ void Trie::insertRouter(std::string address, int routerNum) {
 
             node->children[address[i]]->routerNum = routerNum;
 
-            node->children[address[i]]->longest = address.length();
 
         }
 
+        if (address.length() > node->children[address[i]]->longest) {
+            node->children[address[i]]->longest = address.length();
+            node->children[address[i]]->longestRoute = routerNum;
+        }
 
         node = node->children[address[i]];
 
@@ -67,7 +70,7 @@ int Trie::searchRouter(std::string prefix) {
 
     if (prefix.length() == 1) {
         if (node->children.find(prefix[0]) != node->children.end()) {
-            return node->children[prefix[0]]->routerNum;
+            return node->children[prefix[0]]->longestRoute;
         }
     }
 
@@ -80,7 +83,7 @@ int Trie::searchRouter(std::string prefix) {
         if (node->children.find(prefix[i]) == node->children.end()) break;
 
 
-        res = node->routerNum;
+        res = node->longestRoute;
 
 
         node = node->children[prefix[i]];

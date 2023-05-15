@@ -13,6 +13,7 @@ int main() {
     j.insert("110011011101", 1);
     j.insert("110011011", 2);
     j.insert("11001101", 3);
+    j.insert("11001101110101010101", 4);
 
     std::cout << j.selectRouter("11001101110") << std::endl; // should return 1
     std::cout << j.selectRouter("11001101") << std::endl; // should return 2
