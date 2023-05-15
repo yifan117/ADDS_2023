@@ -37,12 +37,13 @@ void Trie::insertRouter(std::string address, int routerNum) {
 
     TrieNode* node = root;
 
-
     for (int i = 0; i < address.length(); i++) {
 
         if (node->children.find(address[i]) == node->children.end()) {
 
             node->children[address[i]] = new TrieNode();
+
+            node->children[address[i]]->routerNum = routerNum;
 
         }
 
@@ -51,9 +52,6 @@ void Trie::insertRouter(std::string address, int routerNum) {
 
     }
 
-
-    node->routerNum = routerNum;
-
 }
 
 
@@ -61,22 +59,38 @@ int Trie::searchRouter(std::string prefix) {
 
     TrieNode* node = root;
 
-    int res = -1;
+    int res;
 
+    int count = 0;
+
+    if (prefix.length() == 1) {
+        if (node->children.find(prefix[0]) != node->children.end()) {
+            return node->children[prefix[0]]->routerNum;
+        }
+    }
+
+    if (prefix.length() == 0) return -1;
 
     for (int i = 0; i < prefix.length(); i++) {
 
+        count++;
+
         if (node->children.find(prefix[i]) == node->children.end()) break;
+
+
+        res = node->routerNum;
 
 
         node = node->children[prefix[i]];
 
 
-        if (node->routerNum != -1 && node->routerNum > 0) res = node->routerNum;
-
     }
+
+
+    if (count != prefix.length()) return -1;
 
 
     return res;
 
 }
+
