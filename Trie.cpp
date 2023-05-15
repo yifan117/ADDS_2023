@@ -13,7 +13,7 @@ void Trie::insert(std::string word) {
     TrieNode* node = root;
 
     for (int i = 0; i < word.length(); i++) { // iterates over input word
-        if (node->children.count(word[i]) == 0) node->children[word[i]] = new TrieNode(); // checks count of character in node's map, if 0, adds new node
+        if (node->children.find(word[i]) == node->children.end()) node->children[word[i]] = new TrieNode(); // checks count of character in node's map, if 0, adds new node
 
         node = node->children[word[i]]; // iterates to next node
         node->dictionary.push_back(word); // adds word available to each node's dictionary
@@ -23,7 +23,7 @@ void Trie::insert(std::string word) {
 std::vector<std::string> Trie::search(std::string prefix) {
     TrieNode* node = root;
     for (int i = 0; i < prefix.length(); i++) { // iterates over prefix to search
-        if (node->children.count(prefix[i]) == 0) { // if the node's map doesn't have the prefix, the loop stops
+        if (node->children.find(prefix[i]) == node->children.end()) { // if the node's map doesn't have the prefix, the loop stops
             return {};
         }
 
@@ -37,27 +37,32 @@ void Trie::insertRouter(std::string address, int routerNum) {
     TrieNode* node = root;
 
     for (int i = 0; i < address.length(); i++) {
-        if (node->children.count(address[i]) == 0) {
+        if (node->children.find(address[i]) == node->children.end()) {
             node->children[address[i]] = new TrieNode();
+            node->children[address[i]]->routerNum = routerNum;
         }
 
         node = node->children[address[i]];
     }
-
-    node->routerNum = routerNum;
 }
 
 int Trie::searchRouter(std::string prefix) {
     TrieNode* node = root;
-    int res = -1;
+    int res;
+    int count = 0;
 
     for (int i = 0; i < prefix.length(); i++) {
-        if (node->children.count(prefix[i]) == 0) break;
+        if (node->children.find(prefix[i]) == node->children.end()) break;
+
+        count++;
+
+        res = node->routerNum;
 
         node = node->children[prefix[i]];
 
-        if (node->routerNum != -1 && node->routerNum > 0) res = node->routerNum;
     }
+
+    if (count != prefix.length()) return -1;
 
     return res;
 }
