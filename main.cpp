@@ -18,7 +18,8 @@ int main() {
     std::cout << j.selectRouter("11001101") << std::endl; // should return 2
     std::cout << j.selectRouter("1100") << std::endl; // should return 1
     std::cout << j.selectRouter("1111") << std::endl; // should return -1
-    std::cout << j.selectRouter("1") << std::endl; // should return -1
+    std::cout << j.selectRouter("1") << std::endl; // should return 1
+    std::cout << j.selectRouter("11001101110101010101") << std::endl; // should return 1
 
     // std::vector<std::string> suggestions;
 
