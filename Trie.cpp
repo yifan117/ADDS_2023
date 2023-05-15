@@ -71,6 +71,8 @@ int Trie::searchRouter(std::string prefix) {
     if (prefix.length() == 1) {
         if (node->children.find(prefix[0]) != node->children.end()) {
             return node->children[prefix[0]]->longestRoute;
+        } else {
+            return -1;
         }
     }
 
