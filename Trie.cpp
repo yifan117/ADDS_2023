@@ -34,35 +34,49 @@ std::vector<std::string> Trie::search(std::string prefix) {
 }
 
 void Trie::insertRouter(std::string address, int routerNum) {
+
     TrieNode* node = root;
+
 
     for (int i = 0; i < address.length(); i++) {
+
         if (node->children.find(address[i]) == node->children.end()) {
+
             node->children[address[i]] = new TrieNode();
-            node->children[address[i]]->routerNum = routerNum;
+
         }
 
+
         node = node->children[address[i]];
+
     }
+
+
+    node->routerNum = routerNum;
+
 }
 
+
 int Trie::searchRouter(std::string prefix) {
+
     TrieNode* node = root;
-    int res;
-    int count = 0;
+
+    int res = -1;
+
 
     for (int i = 0; i < prefix.length(); i++) {
+
         if (node->children.find(prefix[i]) == node->children.end()) break;
 
-        count++;
-
-        res = node->routerNum;
 
         node = node->children[prefix[i]];
 
+
+        if (node->routerNum != -1 && node->routerNum > 0) res = node->routerNum;
+
     }
 
-    if (count != prefix.length()) return -1;
 
     return res;
+
 }
