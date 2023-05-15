@@ -1,12 +1,12 @@
 #include <unordered_map>
 #include <string>
 #include <vector>
+#include <algorithm>
 
 #include "Trie.h"
 
 Trie::Trie() {
     root = new TrieNode();
-    root->routerNum = -1; // means no router is assigned
 }
 
 void Trie::insert(std::string word) {
@@ -42,19 +42,13 @@ void Trie::insertRouter(std::string address, int routerNum) {
         if (node->children.find(address[i]) == node->children.end()) {
 
             node->children[address[i]] = new TrieNode();
-
-            node->children[address[i]]->routerNum = routerNum;
-
-
         }
 
-        if (address.length() > node->children[address[i]]->longest) {
-            node->children[address[i]]->longest = address.length();
-            node->children[address[i]]->longestRoute = routerNum;
-        }
+        node->children[address[i]]->routerNums.push_back({address.length(), routerNum});
+
+        std::sort(node->children[address[i]]->routerNums.begin(), node->children[address[i]]->routerNums.end(), std::greater<>());
 
         node = node->children[address[i]];
-
     }
 
 }
@@ -70,7 +64,7 @@ int Trie::searchRouter(std::string prefix) {
 
     if (prefix.length() == 1) {
         if (node->children.find(prefix[0]) != node->children.end()) {
-            return node->children[prefix[0]]->longestRoute;
+            return node->children[prefix[0]]->routerNums[0].second;
         } else {
             return -1;
         }
@@ -85,16 +79,13 @@ int Trie::searchRouter(std::string prefix) {
         if (node->children.find(prefix[i]) == node->children.end()) break;
 
 
-        res = node->longestRoute;
+        res = node->children[prefix[i]]->routerNums[0].second;
 
 
         node = node->children[prefix[i]];
 
 
     }
-
-    if (count != prefix.length() && count < node->longest) return -1;
-
 
     return res;
 

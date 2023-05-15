@@ -13,16 +13,18 @@ int main() {
     j.insert("110011011101", 1);
     j.insert("110011011", 2);
     j.insert("11001101", 3);
-    // j.insert("11001101110101010101", 4);
+    j.insert("11001101110101010101", 4);
+    j.insert("101", 5);
 
-    std::cout << j.selectRouter("11001101110") << std::endl; // should return 1
-    std::cout << j.selectRouter("11001101") << std::endl; // should return 1
-    std::cout << j.selectRouter("1100") << std::endl; // should return 1
-    std::cout << j.selectRouter("1111") << std::endl; // should return -1
-    std::cout << j.selectRouter("1") << std::endl; // should return 1
-    std::cout << j.selectRouter("11001101110101010101") << std::endl; // should return 4
-    std::cout << j.selectRouter("110011011101010101011") << std::endl; // should return 4
-    std::cout << j.selectRouter("0") << std::endl; // should return -1
+    // std::cout << j.selectRouter("11001101110") << std::endl; // should return 1
+    // std::cout << j.selectRouter("11001101") << std::endl; // should return 1
+    // std::cout << j.selectRouter("1100") << std::endl; // should return 1
+    // std::cout << j.selectRouter("1111") << std::endl; // should return -1
+    // std::cout << j.selectRouter("1") << std::endl; // should return 1
+    // std::cout << j.selectRouter("11001101110101010101") << std::endl; // should return 4
+    // std::cout << j.selectRouter("110011011101010101011") << std::endl; // should return 4
+    // std::cout << j.selectRouter("0") << std::endl; // should return -1
+    std::cout << j.selectRouter("10") << std::endl;
 
     // std::vector<std::string> suggestions;
 
