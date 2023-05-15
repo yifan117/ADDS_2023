@@ -6,6 +6,7 @@
 
 Trie::Trie() {
     root = new TrieNode();
+    root->routerNum = -1; // means no router is assigned
 }
 
 void Trie::insert(std::string word) {
@@ -30,4 +31,33 @@ std::vector<std::string> Trie::search(std::string prefix) {
     }
 
     return node->dictionary; // returns the node with dictionary that has the prefix
+}
+
+void Trie::insertRouter(std::string address, int routerNum) {
+    TrieNode* node = root;
+
+    for (int i = 0; i < address.length(); i++) {
+        if (node->children.count(address[i]) == 0) {
+            node->children[address[i]] = new TrieNode();
+        }
+
+        node = node->children[address[i]];
+    }
+
+    node->routerNum = routerNum;
+}
+
+int Trie::searchRouter(std::string prefix) {
+    TrieNode* node = root;
+    int res = -1;
+
+    for (int i = 0; i < prefix.length(); i++) {
+        if (node->children.count(prefix[i]) == 0) break;
+
+        node = node->children[prefix[i]];
+
+        if (node->routerNum != -1 && node->routerNum > 0) res = node->routerNum;
+    }
+
+    return res;
 }

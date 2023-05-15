@@ -1,36 +1,47 @@
 #include "Autocomplete.h"
 #include <iostream>
+#include "PrefixMatcher.h"
 
 int main() {
-    Autocomplete j;
+    // Autocomplete j;
+    PrefixMatcher j;
 
-    j.insert("bin");
-    j.insert("ball");
-    j.insert("ballet");
+    // j.insert("bin");
+    // j.insert("ball");
+    // j.insert("ballet");
 
-    std::vector<std::string> suggestions;
+    j.insert("110011011101", 1);
+    j.insert("110011011", 2);
+    j.insert("11001101", 3);
 
-    suggestions = j.getSuggestions("b");
+    std::cout << j.selectRouter("11001101110") << std::endl; // should return 1
+    std::cout << j.selectRouter("11001101") << std::endl; // should return 2
+    std::cout << j.selectRouter("1100") << std::endl; // should return 1
+    std::cout << j.selectRouter("1111") << std::endl; // should return -1
 
-    for (auto c : suggestions) {
-        std::cout << c << std::endl;
-    }
+    // std::vector<std::string> suggestions;
 
-    std::cout << "\n \n";
+    // suggestions = j.getSuggestions("b");
 
-    suggestions = j.getSuggestions("ba");
+    // for (auto c : suggestions) {
+    //     std::cout << c << std::endl;
+    // }
 
-    for (auto c : suggestions) {
-        std::cout << c << std::endl;
-    }
+    // std::cout << "\n \n";
 
-    std::cout << "\n \n";
+    // suggestions = j.getSuggestions("ba");
 
-    suggestions = j.getSuggestions("bal");
+    // for (auto c : suggestions) {
+    //     std::cout << c << std::endl;
+    // }
 
-    for (auto c : suggestions) {
-        std::cout << c << std::endl;
-    }
+    // std::cout << "\n \n";
 
-    std::cout << "\n \n";
+    // suggestions = j.getSuggestions("bal");
+
+    // for (auto c : suggestions) {
+    //     std::cout << c << std::endl;
+    // }
+
+    // std::cout << "\n \n";
 }
