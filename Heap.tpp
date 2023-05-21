@@ -66,10 +66,16 @@ void Heap<T>::insert(T value)
 
     int current = values.size() - 1; // index of new element
 
-    while (current > 0 && values[(current - 1) / 2] > values[current]) {
-        std::swap(values[(current - 1) / 2], values[current]);
+	int parent = (current - 1) / 2;
+	int child = current;
 
-        current = (current - 1) / 2; // updates index to parent's index
+    while (current > 0 && values[parent] > values[current]) {
+        std::swap(values[parent], values[current]);
+
+        current = parent; // updates index to parent's index
+		
+		parent = (current - 1) / 2;
+		child = current;
     }
 }
 
