@@ -1,0 +1,18 @@
+stack is lifo, queue is fifothe different access orders is due to different internal structures
+
+front of the queue is the head of the ll, rear of queue is the tail, enqueue op is adding node to the end of the list, dequeue is removing from front, doubly ll is better because it allows for efficient constant time removes from front and back, whereas a singly ll would require linear time
+
+it cannot, every path from a node to a descendant leaf must have an equal number of black nodes, only red nodes would mean that there would be paths with different numbers of black nodes
+
+enqueue: pushes onto first stack, constant time
+dequeue: if second stack is empty, while first stack is not empty, pop elements from first stack and push unto second stack, reversing the elements from first stack to second stack. pop and return top el from second stack, worst case time comp is linear (when second is empty, and all el's ned to be popped from first and pushed to second, where n is the number of el's in the stack)
+if you needed accurate access to the front of your 'queue', then id do the enqueue and dequeue process every time you added something to your 'queue', this would also make the average case linear as you need to push to your first stack, and pop each el onto your second stack. stack2.top() would give you your queue.front()
+
+push and pop are already constant time operations, for finding min element, id use two stacks, one to keep track of all nums, and one that keeps track of the min. every time you push to main, you check if the second stack is empty or if the value is less than the second stack's top, if it is, push to the second stack too. this will keep track of your min element. for pop, you check if what you're popping from the main stack is equal to the top of the min stack, if yes, pop from both. for find, just return min stack's top. limitation is space complexity as you're using 2 stacks instead of 1
+
+post order, you traverse left, then right, then root. ensures each node is visited after its descendants
+
+pre order, visits root before children, creates root of new tree before creating children, then left and right are copied
+
+in order, visits nodes in ascending order, all nodes in left subtree are smaller, nodes in right are greater
+

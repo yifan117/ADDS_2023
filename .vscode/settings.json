@@ -48,7 +48,8 @@
         "xtr1common": "cpp",
         "xutility": "cpp",
         "unordered_set": "cpp",
-        "*.tpp": "cpp"
+        "*.tpp": "cpp",
+        "algorithm": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }

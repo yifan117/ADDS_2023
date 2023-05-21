@@ -62,7 +62,21 @@ template <typename T>
 void Heap<T>::insert(T value)
 {
 	// TO BE IMPLEMENTED
-    
+    values.push_back(value);
+
+	int current = values.size() - 1; // index of new element
+
+	int parent = values[(current - 1) / 2];
+	int child = values[current];
+
+	while (current > 0 && parent > child) {
+		std::swap(parent, child);
+
+		current = (current - 1) / 2; // updates index to parent's index
+
+		parent = values[(current - 1) / 2]; // updates parent
+		child = values[current]; // updates child
+	}
 }
 
 /*******************************/
@@ -73,6 +87,23 @@ template <typename T>
 void Heap<T>::remove(T value)
 {
 	// TO BE IMPLEMENTED
+	int index = -1;
+
+	// iterates through to find the value to be deleted
+	for (int i = 0; i < values.size(); i++) {
+		if (values[i] == value) {
+			index = i;
+			break;
+		}
+	}
+
+	if (index == -1) return; // exit function if value is not found in heap
+
+	// replaces value with last value in heap
+	values[index] = values.back();
+	values.pop_back();
+
+	heapify(index); // heapify heap starting from replaced index
 }
 
 /*******************************/
@@ -83,6 +114,8 @@ template <typename T>
 T Heap<T>::getMin()
 {
 	// TO BE IMPLEMENTED
+	if (!values.empty()) return values[0];
+	else std::cout << "Empty" << std::endl;
 }
 
 /*******************************/
