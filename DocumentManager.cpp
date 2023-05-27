@@ -1,7 +1,5 @@
 #include "DocumentManager.h"
 
-DocumentManager::DocumentManager() {}
-
 void DocumentManager::addDocument(std::string name, int id, int license_limit) {
     Document new_doc;
 
