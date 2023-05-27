@@ -10,8 +10,8 @@
 
 class DocumentManager {
     private:
-        std::unordered_map<int, Document> documents;
-        std::unordered_map<int, std::unordered_set<int>> patrons;
+        std::unordered_map<int, Document> documents; // allows for O(1) operations, most importantly, lookup
+        std::unordered_map<int, std::unordered_set<int>> patrons; // allows for O(1) operations, most importantly, lookup, same as the set
         std::unordered_map<std::string, int> directory; // searches name to find docid
 
     public:
